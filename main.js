@@ -12,23 +12,48 @@ const headerElement = createElement("section", {
   ],
 });
 
+const characters = [
+  {
+    imgSrc: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    name: "Rick Sanchez",
+    status: "alive",
+    species: "Human",
+    origin: {
+      name: "Earth",
+    },
+  },
+  {
+    imgSrc: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    name: "Rick Sanchez",
+    status: "alive",
+    species: "Human",
+    origin: {
+      name: "Earth",
+    },
+  },
+];
+
 const mainElement = createElement("main", {
   className: "main",
   children: [
-    createElement("input", { placeholder: "Enter name" }),
+    createElement("input", {
+      placeholder: "Enter name",
+      className: "main__input",
+    }),
     createElement("section", {
       className: "characters",
-      children: [
-        createCharacterElement({
-          imgSrc: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
-          name: "Rick Sanchez",
-          status: "alive",
-          species: "Human",
-          origin: {
-            name: "Earth",
-          },
-        }),
-      ],
+      // children: [
+      //   createCharacterElement({
+      //     imgSrc: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+      //     name: "Rick Sanchez",
+      //     status: "alive",
+      //     species: "Human",
+      //     origin: {
+      //       name: "Earth",
+      //     },
+      //   }),
+      // ],
+      children: characters.map(createCharacterElement),
     }),
     createElement("section", {
       innerText: "Footer",

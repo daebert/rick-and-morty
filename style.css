@@ -1,3 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -7,47 +18,9 @@
   margin-top: 0;
 }
 
-/* .header {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background: lightgrey;
-  margin-top: 0px;
-} */
-
 .main {
   background: lightcoral;
   display: grid;
-  grid-template-rows: 1fr 1fr 3fr;
-
-  /* height: 100vh; */
+  grid-template-rows: auto 1fr 1fr;
+  padding: 0;
 }
-
-/* 
-.hero {
-  background: lightblue;
-}
-
-.characters {
-  padding: 2em;
-  display: grid;
-  background-color: greenyellow;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: 1fr 2fr;
-}
-
-.character {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
-  background-color: #3c3e44;
-  border-top-left-radius: 1em;
-  border-bottom-left-radius: 1em;
-  color: white;
-}
-
-.footer {
-  background-color: red;
-  color: black;
-} */
