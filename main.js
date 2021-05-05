@@ -7,7 +7,6 @@ const headerElement = createElement("section", {
   children: [
     createElement("section", {
       innerText: "The Rick and Morty API",
-      className: "header",
     }),
   ],
 });
@@ -42,24 +41,17 @@ const mainElement = createElement("main", {
     }),
     createElement("section", {
       className: "characters",
-      // children: [
-      //   createCharacterElement({
-      //     imgSrc: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
-      //     name: "Rick Sanchez",
-      //     status: "alive",
-      //     species: "Human",
-      //     origin: {
-      //       name: "Earth",
-      //     },
-      //   }),
-      // ],
-      children: characters.map(createCharacterElement),
-    }),
-    createElement("section", {
-      innerText: "Footer",
-      className: "footer",
+
+      children: characters.map((character) =>
+        createCharacterElement(character)
+      ),
     }),
   ],
 });
 
+// // const footerElement = createElement("section", {
+// //   ,
+// //   className: "footer",
+// children: [createElement("section", )];
+// // }),
 document.querySelector("#app").append(headerElement, mainElement);
